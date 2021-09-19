@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-//난수 추출된 수의 소수 판정 프로그램 v0.4
+//난수 추출된 수의 소수 판정 프로그램 v0.6
 //소수 : 1과 자기 자신외에는 나누어 떨어지지 않는 수 0과 1은 제외
 func main() {
 	//seed 설정
@@ -21,8 +21,9 @@ func main() {
 	for i := 2; i < number; i++ {
 		if number%i == 0 {
 			isPrime = false
+			break
 		}
-		fmt.Print(i, " ")
+		//fmt.Print(i, " ")
 	}
 
 	if isPrime { //비교 연산자 제거
